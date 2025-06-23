@@ -193,6 +193,7 @@ for FILE in ${files[@]}; do
                 date_str="${shortname//_calib.zip/}"
                 evidence="${DATAFOLDER}/${date_str}/calib_cam_to_cam.txt"
         fi
+        echo "Looking for evidence: $evidence"
         if [ -f "$evidence" ]; then
                 echo -e "Already downloaded ${shortname}\n"
         else
