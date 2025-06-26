@@ -86,7 +86,10 @@ class RcCarsSceneDataset(BaseSceneDataset):
 
     @property
     def frames(self):
-        return sorted(list(self._img_id_to_file.keys())) 
+        return sorted(list(self._img_id_to_file.keys()))
+    
+    def _load_frames(self, *args, **kwargs):
+        return self.frames
 
     def __str__(self):
         return f"RCCar Dataset of folder: {self.scene_path}"
